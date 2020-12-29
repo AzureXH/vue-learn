@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <router-view />
+    <v-app>
+      <PageHeader />
+
+      <main>
+        <v-container fluid>
+          Hello World
+          <router-view />
+        </v-container>
+      </main>
+    </v-app>
   </div>
 </template>
 
 <script>
+import PageHeader from "@/components/Header.vue";
 export default {
-  name: 'App'
-}
+  name: "App",
+  components: {
+    PageHeader,
+  },
+};
 </script>
 
 <style>
@@ -18,16 +31,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.input-group--text-field input {
-  border-bottom: 1px solid black;
-}
-
-.toolbar__title {
-  color: white;
-}
-.btn__content {
-  color: white;
 }
 </style>
